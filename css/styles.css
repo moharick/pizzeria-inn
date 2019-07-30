@@ -5,3 +5,18 @@ html{
 body{
   background-color: darkorange;
 }
+nav{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+}
+.landing{
+  background-image: url("../images/pizzeria.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  height: 580px;
+  padding-bottom: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
