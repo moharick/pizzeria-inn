@@ -20,3 +20,14 @@ nav{
   position: relative;
   overflow-x: hidden;
 }
+h1{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 80px;
+  color: green;
+  text-shadow: 10px 10px black;
+  margin-top: 150px;
+}
+h5{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 40px;
+}
