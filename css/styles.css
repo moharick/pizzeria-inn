@@ -31,3 +31,84 @@ h5{
   font-family: 'Permanent Marker', cursive;
   font-size: 40px;
 }
+
+
+
+.btn{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+}
+.empty{
+  background-color: darkorange;
+}
+.d-flex{
+  display: flex;
+}
+#about-us{
+  background-color: darkorange;
+}
+h3{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 60px;
+}
+p{
+  font-family: 'Permanent Marker', cursive;
+  color: antiquewhite;
+  font-size: 20px;
+}
+.order-overlay{
+  background-color: darkorange;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-right: 18px;
+  padding-left: 18px;
+}
+.overlay{
+  background-color: whitesmoke;
+  color: antiquewhite;
+  
+}
+label{
+  font-family: 'Permanent Marker', cursive;
+}
+h2{
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+}
+#number{
+  font-family: 'Permanent Marker', cursive;
+}
+.contacts{
+  background-color: darkorange;
+  margin-bottom: 5%;
+  /* margin-left: 5%;
+  margin-right: 5%;
+  padding-right: 18px;
+  padding-left: 18px; */
+  padding-bottom: 18px;
+
+}
+#MERGE1{
+  background-color: #66000000;
+}
+#MERGE0{
+  background-color: #66000000;
+  
+}
+#message{
+  background-color: #66000000;
+}
+h2{
+  color: black;
+}
+.footer{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+}
+#checkout{
+  background-color: darkorange;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-right: 18px;
+  padding-left: 18px;
+}
