@@ -1,0 +1,77 @@
+function PizzaOrder(size, crust, toppings){
+    this.size = size;
+    this.crust = crust;
+    this.topping = toppings;
+    this.price = 0;
+};
+let sizePrice, crustPrice , totalCost;
+$(document).ready(function() {
+    $("button.order").click(function() {
+        $("button.order").hide();
+        event.preventDefault();
+        var customFlavor = $("#flavor option:selected").val();
+        var customSize = $("#size option:selected").val();
+        var customCrust = $("#crust option:selected").val();
+        var customToppings = [];
+        $.each($("input[name='toppings']:checked"), function(){
+            customToppings.push($(this).val());
+        });
+        var quantity = $("#number").val();
+        if (customSize == "Extra large"){
+            sizePrice = 1400;
+        }
+        else if(customSize == "Large"){
+            sizePrice = 1100;
+        }
+        else if(customSize == "Medium"){
+            sizePrice = 800;
+        }
+        else if(customSize == "Small"){
+            sizePrice = 600;
+        }else{
+            sizePrice = 0;
+        }
+        if (customCrust == "Thin"){
+            crustPrice = 100;
+        }
+        else if(customCrust == "Thick"){
+            crustPrice = 200;
+        }
+        else if(customCrust == "DoubleStack"){
+            crustPrice = 250;
+        }
+        else{
+            crustPrice = 0;
+        }
+
+      totalCost = sizePrice + crustPrice + (customToppings.length*50);
+      totalCost= totalCost*quantity;
+      $("#pflavor").html(customFlavor);
+      $("#psize").html(customSize);  
+      $("#pcrust").html(customCrust);
+      $("#ptoppings").html(customToppings); 
+      $("#pnumber").html(quantity);
+      $("#ptotal-cost").html(totalCost);
+        console.log(crustPrice);
+        console.log(totalCost);
+        console.log(sizePrice);
+        console.log(quantity);
+        console.log(customToppings);
+        console.log(customFlavor);
+        console.log(customSize);
+        console.log(customCrust);
+        $()
+    });
+    $("button.delivery").click(function(){
+        $(".table").hide();
+        $(".delivery").slideDown(1000);
+        $("#addedprice").hide();
+        $("button.delivery").hide();
+        $("#pizzatotal").hide();
+        let deliveryAmount= totalCost+200;
+        console.log("You will pay sh. " + deliveryAmount + " on delivery");
+        $("p#del").html("Your bill plus delivery fee is: "+deliveryAmount);
+      });
+      
+
+    });
