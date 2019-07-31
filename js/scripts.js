@@ -65,13 +65,31 @@ $(document).ready(function() {
     $("button.delivery").click(function(){
         $(".table").hide();
         $(".delivery").slideDown(1000);
-        $("#addedprice").hide();
         $("button.delivery").hide();
-        $("#pizzatotal").hide();
         let deliveryAmount= totalCost+200;
         console.log("You will pay sh. " + deliveryAmount + " on delivery");
         $("p#del").html("Your bill plus delivery fee is: "+deliveryAmount);
       });
-      
+      $("button.check-out").click(function(){ 
+        let deliveryAmount= totalCost+200;
+        console.log("Your total bills is sh. "+ deliveryAmount);
+        
+      });
+      $("button.check-out").click(function(){
+        event.preventDefault();
+      let person = $("input#name").val();
+      let phone = $("input#phone").val();
+      let location = $("input#location").val();
+      let deliveryAmount= totalCost+200;
+      if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
+  
+        $("#message").append(person +", We have recieved your order and it will be delivered to you at "+location+ ". Prepare sh. "+deliveryAmount);
+        $("#message").slideDown(1200);
+      }
+      else {
+        alert("Please fill in the details for delivery!");
+      }
+    
 
     });
+});
